@@ -23,6 +23,31 @@
           <Icon time />
           <Icon cloud />
         </div>
+        <div style="display: flex;">
+          <Card>
+            <p slot="title" class="card__title">
+              <Icon sun-active />
+            </p>
+            <p slot="content" class="card__content">Xiaomi Yeelight LED Smart Bulb</p>
+            <p slot="footer" class="card__footer">Включено</p>
+          </Card>
+
+          <Card>
+            <p slot="title" class="card__title">
+              <Icon sun />
+            </p>
+            <p slot="content" class="card__content">D-Link Omna 180 Cam</p>
+            <p slot="footer" class="card__footer">Включится в 17:00</p>
+          </Card>
+
+          <Card>
+            <p slot="title" class="card__title">
+              <Icon temperature />
+            </p>
+            <p slot="content" class="card__content">Elgato Eve Degree Connected</p>
+            <p slot="footer" class="card__footer">Выключено до 17:00</p>
+          </Card>
+        </div>
       </Content>
       <Footer>Footer</Footer>
     </Layout>
@@ -39,6 +64,7 @@ import Footer from './components/Footer/Footer.vue';
 import Button from './components/Button/Button.vue';
 import Chip from './components/Chip/Chip.vue';
 import Icon from './components/Icon/Icon.vue';
+import Card from './components/Card/Card.vue';
 
 export default {
   name: 'app',
@@ -52,6 +78,7 @@ export default {
     Button,
     Chip,
     Icon,
+    Card,
   },
 };
 </script>
@@ -86,5 +113,9 @@ a,
 button,
 input {
   outline-color: var(--dark-yellow);
+}
+
+p {
+  margin: 0;
 }
 </style>
