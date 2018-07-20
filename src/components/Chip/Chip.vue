@@ -28,6 +28,7 @@ export default {
   background-color: var(--lighten-gray);
   cursor: pointer;
   outline-color: var(--dark-yellow);
+  transition: all 0.3s ease-out;
 }
 
 .chip:first-of-type {

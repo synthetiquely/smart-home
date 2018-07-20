@@ -6,6 +6,9 @@
         <HeaderMenu />
       </Header>
       <Content>
+        <Featured />
+        <br>
+        <br>
         <Button primary @click="showModal = true">Показать</Button>
         <Button secondary>Применить</Button>
         <Button>Закрыть</Button>
@@ -86,6 +89,7 @@ import Chip from './components/Chip/Chip.vue';
 import Icon from './components/Icon/Icon.vue';
 import Card from './components/Card/Card.vue';
 import Modal from './components/Modal/Modal.vue';
+import Featured from './components/Featured/Featured.vue';
 
 export default {
   name: 'app',
@@ -101,6 +105,7 @@ export default {
     Icon,
     Card,
     Modal,
+    Featured,
   },
   data() {
     return {
@@ -144,5 +149,25 @@ input {
 
 p {
   margin: 0;
+  color: var(--dark-gray);
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+span {
+  color: var(--gray);
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.title {
+  margin: 0;
+  padding: 10px 0;
+  color: var(--dark-gray);
+  font-size: 27px;
+  line-height: 31px;
+  font-weight: 600;
 }
 </style>

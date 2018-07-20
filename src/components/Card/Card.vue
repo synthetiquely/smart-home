@@ -8,8 +8,8 @@
 
 <style scoped>
 .card {
-  width: 200px;
-  height: 120px;
+  width: 170px;
+  height: 90px;
   padding: 15px;
   margin: 10px;
   display: flex;
@@ -18,14 +18,6 @@
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease-out;
-}
-
-.card:first-of-type {
-  margin-left: 0;
-}
-
-.card:last-of-type {
-  margin-right: 0;
 }
 
 .card:hover,

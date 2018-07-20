@@ -40,6 +40,7 @@ export default {
   cursor: pointer;
   outline-color: var(--dark-yellow);
   border: none;
+  transition: all 0.3s ease-out;
 }
 
 .button.primary {
