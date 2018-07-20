@@ -20,6 +20,12 @@
   transition: all 0.3s ease-out;
 }
 
+@media screen and (max-width: 1200px) {
+  .card {
+    height: 120px;
+  }
+}
+
 .card:hover,
 .card:active,
 .card:focus,

@@ -1,23 +1,14 @@
 <template>
-  <section class="feed">
-    <Card>
-      <p slot="title" class="card__title">
-        <Icon temperature />
+  <section :class="{'horizontal': horizontal}" class="feed">
+    <Card v-for="item in items" :key="item.title">
+      <p v-if="item.icon" slot="title" class="card__title">
+        <Icon :type="item.icon" />
       </p>
-      <p slot="content" class="card__content">Philips Cooler</p>
-      <p slot="footer" class="card__footer">Начнет охлаждать в 16:30</p>
+      <p v-if="item.title" slot="content" class="card__content">{{item.title}}</p>
+      <p v-if="item.status" slot="footer" class="card__footer">{{item.status}}</p>
     </Card>
-
-    <Card>
-      <p slot="title" class="card__title">
-        <Icon sun />
-      </p>
-      <p slot="content" class="card__content">Xiaomi Yeelight LED Smart Bulb</p>
-      <p slot="footer" class="card__footer">Включится в 17:00</p>
-    </Card>
-
     <button class="feed__action">
-      <Icon double-arrows-up />
+      <Icon type="double-arrows-up"  />
     </button>
   </section>
 </template>
@@ -31,6 +22,17 @@ export default {
     Card,
     Icon,
   },
+  props: {
+    horizontal: {
+      type: Boolean,
+      default: false,
+      required: false,
+    },
+    items: {
+      type: Array,
+      required: true,
+    },
+  },
 };
 </script>
 
@@ -38,10 +40,18 @@ export default {
 .feed {
   position: relative;
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.feed.horizontal {
+  flex-direction: row;
+}
+
+.feed.horizontal > .feed__action {
+  display: none;
+  visibility: hidden;
 }
 
 .feed__action {

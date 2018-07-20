@@ -1,26 +1,13 @@
 <template>
-  <div
-    :class="{
-      'icon': true,
-      'icon__sun': sun,
-      'icon__temperature': temperature,
-      'icon__time': time,
-      'icon__cloud': cloud,
-      'icon__sun-active': sunActive,
-      'icon__temperature-active': temperatureActive,
-      'icon__double-arrows-up': doubleArrowsUp,
-      'icon__double-arrows-down': doubleArrowsDown,
-    }"
-  />
+  <div :class="classes" />
 </template>
 
 <script>
 export default {
   props: {
-    sun: {
-      type: Boolean,
-      default: false,
-      required: false,
+    type: {
+      type: String,
+      required: true,
     },
     temperature: {
       type: Boolean,
@@ -57,6 +44,11 @@ export default {
       default: false,
       required: false,
     },
+  },
+  data() {
+    return {
+      classes: `icon icon__${this.type}`,
+    };
   },
 };
 </script>

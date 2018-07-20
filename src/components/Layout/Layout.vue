@@ -4,6 +4,7 @@
 
 <style>
 .layout {
+  height: 100%;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 120px auto 50px;

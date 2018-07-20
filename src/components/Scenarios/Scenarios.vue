@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="section-scenarios">
     <h2 class="subtitle">Избранные сценарии</h2>
     <section class="scenarios">
 
       <div class="scenario">
         <Card>
           <p slot="title" class="card__title">
-            <Icon sun-active />
+            <Icon type="sun-active" />
           </p>
           <p slot="content" class="card__content">Выключить весь свет в доме и во дворе</p>
         </Card>
@@ -14,7 +14,7 @@
       <div class="scenario">
         <Card>
           <p slot="title" class="card__title">
-            <Icon time />
+            <Icon type="time" />
           </p>
           <p slot="content" class="card__content">Я ухожу</p>
         </Card>
@@ -22,7 +22,7 @@
       <div class="scenario">
         <Card>
           <p slot="title" class="card__title">
-            <Icon sun-active />
+            <Icon type="sun-active" />
           </p>
           <p slot="content" class="card__content">Включить свет <br> коридоре</p>
         </Card>
@@ -30,7 +30,7 @@
       <div class="scenario">
         <Card>
           <p slot="title" class="card__title">
-            <Icon temperature-active />
+            <Icon type="temperature-active" />
           </p>
           <p slot="content" class="card__content">Набрать горячую ванну</p>
           <p slot="footer" class="card__footer">Начнётся в 18:00</p>
@@ -39,7 +39,7 @@
       <div class="scenario">
         <Card>
           <p slot="title" class="card__title">
-            <Icon temperature-active />
+            <Icon type="temperature-active" />
           </p>
           <p slot="content" class="card__content">Сделать пол тёплым во всей квартире</p>
         </Card>
@@ -61,12 +61,15 @@ export default {
 </script>
 
 <style scoped>
-.scenarios {
+.section-scenarios {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+}
+
+.scenarios {
   display: grid;
   grid-template-columns: repeat(auto-fit, 220px);
-  grid-auto-rows: 140px;
+  grid-auto-rows: auto;
   grid-auto-flow: dense;
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="section-featured">
     <h2 class="subtitle">Главное</h2>
     <section class="featured">
       <div class="featured__meta">
@@ -13,12 +13,12 @@
           </div>
           <div class="temperature-stats__item">
             <span>За окном</span>
-            <span class="temperature-stats__data">+19&nbsp;<Icon cloud/></span>
+            <span class="temperature-stats__data">+19&nbsp;<Icon type="cloud"/></span>
           </div>
         </div>
       </div>
       <div class="featured__feed">
-        <Feed />
+        <Feed :items="devices" />
       </div>
     </section>
   </div>
@@ -27,19 +27,28 @@
 <script>
 import Feed from './../Feed/Feed.vue';
 import Icon from './../Icon/Icon.vue';
+import devices from '../../mocks/devices';
 
 export default {
   components: {
     Feed,
     Icon,
   },
+  data() {
+    return {
+      devices,
+    };
+  },
 };
 </script>
 
 <style scoped>
-.featured {
+.section-featured {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+}
+
+.featured {
   width: 600px;
   height: 301px;
   padding: 15px;
@@ -60,7 +69,7 @@ export default {
   grid-column: 2 / -1;
   grid-row: 1 / -1;
   margin: -15px 0;
-  overflow-y: visible;
+  overflow-y: hidden;
 }
 
 .temperature-stats {

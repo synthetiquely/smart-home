@@ -8,12 +8,13 @@
       <Content>
         <Featured />
         <Scenarios />
+        <Devices />
 
         <Modal v-if="showModal">
           <div slot="header" style="display: flex; justify-content: space-between;">
             <h1 style="margin: 0; font-size: 27px;">Elgato Eve Degree Connected</h1>
             <span>+23</span>
-            <Icon temperature-active />
+            <Icon type="temperature-active" />
           </div>
           <div slot="content" style="display: flex; flex-direction: column;">
             <p>Включено</p>
@@ -49,6 +50,7 @@ import Card from './components/Card/Card.vue';
 import Modal from './components/Modal/Modal.vue';
 import Featured from './components/Featured/Featured.vue';
 import Scenarios from './components/Scenarios/Scenarios.vue';
+import Devices from './components/Devices/Devices.vue';
 
 export default {
   name: 'app',
@@ -66,6 +68,7 @@ export default {
     Modal,
     Featured,
     Scenarios,
+    Devices,
   },
   data() {
     return {
@@ -93,8 +96,13 @@ export default {
 
 html,
 body {
+  height: 100%;
   font-family: 'Roboto Mono', monospace;
   font-size: 18px;
+}
+
+#app {
+  height: 100%;
 }
 
 body {
