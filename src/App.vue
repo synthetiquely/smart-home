@@ -15,6 +15,14 @@
           <Chip text="Вечерний свет" />
           <Chip text="Рассвет" />
         </div>
+        <div style="display: flex;">
+          <Icon sun />
+          <Icon sun-active />
+          <Icon temperature />
+          <Icon temperature-active />
+          <Icon time />
+          <Icon cloud />
+        </div>
       </Content>
       <Footer>Footer</Footer>
     </Layout>
@@ -30,6 +38,7 @@ import Content from './components/Content/Content.vue';
 import Footer from './components/Footer/Footer.vue';
 import Button from './components/Button/Button.vue';
 import Chip from './components/Chip/Chip.vue';
+import Icon from './components/Icon/Icon.vue';
 
 export default {
   name: 'app',
@@ -42,6 +51,7 @@ export default {
     Logo,
     Button,
     Chip,
+    Icon,
   },
 };
 </script>
