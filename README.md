@@ -1,7 +1,5 @@
 # smart-home
 
-# smart-home
-
 Smart Home UIKit
 
 ## Design & Mockups
