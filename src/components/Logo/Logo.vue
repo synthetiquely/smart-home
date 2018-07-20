@@ -1,5 +1,5 @@
 <template>
-  <a href="/">
+  <a tabindex="0" href="/">
     <div class="logo"/>
   </a>
 </template>
@@ -15,5 +15,6 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  outline-color: var(--dark-yellow);
 }
 </style>

@@ -59,5 +59,6 @@
   letter-spacing: 0.01px;
   text-align: left;
   text-decoration: none;
+  outline-color: var(--dark-yellow);
 }
 </style>

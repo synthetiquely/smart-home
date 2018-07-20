@@ -9,6 +9,12 @@
         <Button primary>Применить</Button>
         <Button secondary>Применить</Button>
         <Button>Закрыть</Button>
+        <div style="display: flex;">
+          <Chip text="Вручную" />
+          <Chip text="Дневной свет" />
+          <Chip text="Вечерний свет" />
+          <Chip text="Рассвет" />
+        </div>
       </Content>
       <Footer>Footer</Footer>
     </Layout>
@@ -23,6 +29,7 @@ import Logo from './components/Logo/Logo.vue';
 import Content from './components/Content/Content.vue';
 import Footer from './components/Footer/Footer.vue';
 import Button from './components/Button/Button.vue';
+import Chip from './components/Chip/Chip.vue';
 
 export default {
   name: 'app',
@@ -34,6 +41,7 @@ export default {
     HeaderMenu,
     Logo,
     Button,
+    Chip,
   },
 };
 </script>
@@ -62,5 +70,11 @@ body {
 
 body {
   margin: 0;
+}
+
+a,
+button,
+input {
+  outline-color: var(--dark-yellow);
 }
 </style>

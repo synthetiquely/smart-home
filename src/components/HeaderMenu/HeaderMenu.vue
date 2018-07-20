@@ -40,6 +40,7 @@
   color: var(--dark-gray);
   opacity: 0.6;
   text-decoration: none;
+  outline-color: var(--dark-yellow);
 }
 
 .navigation__link:hover,

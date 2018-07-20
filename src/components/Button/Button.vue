@@ -25,6 +25,7 @@ export default {
 .button {
   width: 307px;
   height: 60px;
+  margin: 0 5px;
   border-radius: 20px;
   color: var(--dark-gray);
   background-color: var(--white);
@@ -34,7 +35,7 @@ export default {
   line-height: 21px;
   letter-spacing: 0;
   cursor: pointer;
-  outline: none;
+  outline-color: var(--dark-yellow);
   border: none;
 }
 
