@@ -35,6 +35,16 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&subset=cyrillic');
 
+:root {
+  --gray: #858585;
+  --light-gray: #f0f0f0;
+  --lighten-gray: ##f7f7f7;
+  --dark-gray: #333;
+  --yellow: #ffd93e;
+  --desktop-container-paddings: 0 30px;
+  --mobile-container-paddings: 0 15px;
+}
+
 html,
 body {
   font-family: 'Roboto Mono', monospace;

@@ -37,7 +37,7 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 600;
-  color: #333;
+  color: var(--dark-gray);
   opacity: 0.6;
   text-decoration: none;
 }
