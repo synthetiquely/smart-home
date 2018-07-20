@@ -1,26 +1,27 @@
 <template>
-  <section class="featured">
+  <div>
+    <h2 class="subtitle">Главное</h2>
+    <section class="featured">
+      <div class="featured__meta">
+        <h1 class="title">Привет, Геннадий!</h1>
+        <p class="description">Двери и окна закрыты, сигналиация включена.</p>
 
-    <div class="featured__meta">
-      <h1 class="title">Привет, Геннадий!</h1>
-      <p class="description">Двери и окна закрыты, сигналиация включена.</p>
-
-      <div class="temperature-stats">
-        <div class="temperature-stats__item">
-          <span>Дома</span>
-          <span class="temperature-stats__data">+23</span>
-        </div>
-        <div class="temperature-stats__item">
-          <span>За окном</span>
-          <span class="temperature-stats__data">+19&nbsp;<Icon cloud/></span>
+        <div class="temperature-stats">
+          <div class="temperature-stats__item">
+            <span>Дома</span>
+            <span class="temperature-stats__data">+23</span>
+          </div>
+          <div class="temperature-stats__item">
+            <span>За окном</span>
+            <span class="temperature-stats__data">+19&nbsp;<Icon cloud/></span>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="featured__feed">
-      <Feed />
-    </div>
-  </section>
+      <div class="featured__feed">
+        <Feed />
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -37,6 +38,8 @@ export default {
 
 <style scoped>
 .featured {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
   width: 600px;
   height: 301px;
   padding: 15px;

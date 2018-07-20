@@ -7,50 +7,8 @@
       </Header>
       <Content>
         <Featured />
-        <br>
-        <br>
-        <Button primary @click="showModal = true">Показать</Button>
-        <Button secondary>Применить</Button>
-        <Button>Закрыть</Button>
-        <div style="display: flex;">
-          <Chip text="Вручную" />
-          <Chip text="Дневной свет" />
-          <Chip text="Вечерний свет" />
-          <Chip text="Рассвет" />
-        </div>
-        <div style="display: flex;">
-          <Icon sun />
-          <Icon sun-active />
-          <Icon temperature />
-          <Icon temperature-active />
-          <Icon time />
-          <Icon cloud />
-        </div>
-        <div style="display: flex;">
-          <Card>
-            <p slot="title" class="card__title">
-              <Icon sun-active />
-            </p>
-            <p slot="content" class="card__content">Xiaomi Yeelight LED Smart Bulb</p>
-            <p slot="footer" class="card__footer">Включено</p>
-          </Card>
+        <Scenarios />
 
-          <Card>
-            <p slot="title" class="card__title">
-              <Icon sun />
-            </p>
-            <p slot="content" class="card__content">D-Link Omna 180 Cam</p>
-            <p slot="footer" class="card__footer">Включится в 17:00</p>
-          </Card>
-
-          <Card>
-            <p slot="title" class="card__title">
-              <Icon temperature />
-            </p>
-            <p slot="content" class="card__content">Elgato Eve Degree Connected</p>
-            <p slot="footer" class="card__footer">Выключено до 17:00</p>
-          </Card>
-        </div>
         <Modal v-if="showModal">
           <div slot="header" style="display: flex; justify-content: space-between;">
             <h1 style="margin: 0; font-size: 27px;">Elgato Eve Degree Connected</h1>
@@ -90,6 +48,7 @@ import Icon from './components/Icon/Icon.vue';
 import Card from './components/Card/Card.vue';
 import Modal from './components/Modal/Modal.vue';
 import Featured from './components/Featured/Featured.vue';
+import Scenarios from './components/Scenarios/Scenarios.vue';
 
 export default {
   name: 'app',
@@ -106,6 +65,7 @@ export default {
     Card,
     Modal,
     Featured,
+    Scenarios,
   },
   data() {
     return {
@@ -168,6 +128,15 @@ span {
   color: var(--dark-gray);
   font-size: 27px;
   line-height: 31px;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 0;
+  padding: 10px 0;
+  color: var(--dark-gray);
+  font-size: 18px;
+  line-height: 21px;
   font-weight: 600;
 }
 </style>
