@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <Layout>
-      <Header>Header</Header>
+      <Header>
+        <Logo />
+        <HeaderMenu />
+      </Header>
       <Content>Content</Content>
       <Footer>Footer</Footer>
     </Layout>
@@ -11,6 +14,8 @@
 <script>
 import Layout from './components/Layout/Layout.vue';
 import Header from './components/Header/Header.vue';
+import HeaderMenu from './components/HeaderMenu/HeaderMenu.vue';
+import Logo from './components/Logo/Logo.vue';
 import Content from './components/Content/Content.vue';
 import Footer from './components/Footer/Footer.vue';
 
@@ -21,6 +26,8 @@ export default {
     Header,
     Content,
     Footer,
+    HeaderMenu,
+    Logo,
   },
 };
 </script>
