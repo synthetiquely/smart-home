@@ -1,5 +1,8 @@
 <template>
-  <button :class="{'button': true, 'primary': primary, 'secondary': secondary}">
+  <button
+    :class="{'button': true, 'primary': primary, 'secondary': secondary}"
+    @click="$emit('click')"
+  >
     <slot />
   </button>
 </template>

@@ -6,7 +6,7 @@
         <HeaderMenu />
       </Header>
       <Content>
-        <Button primary>Применить</Button>
+        <Button primary @click="showModal = true">Показать</Button>
         <Button secondary>Применить</Button>
         <Button>Закрыть</Button>
         <div style="display: flex;">
@@ -48,6 +48,26 @@
             <p slot="footer" class="card__footer">Выключено до 17:00</p>
           </Card>
         </div>
+        <Modal v-if="showModal">
+          <div slot="header" style="display: flex; justify-content: space-between;">
+            <h1 style="margin: 0; font-size: 27px;">Elgato Eve Degree Connected</h1>
+            <span>+23</span>
+            <Icon temperature-active />
+          </div>
+          <div slot="content" style="display: flex; flex-direction: column;">
+            <p>Включено</p>
+            <div style="display: flex;">
+              <Chip text="Вручную" />
+              <Chip text="Холодно" />
+              <Chip text="Тепло" />
+              <Chip text="Жарко" />
+            </div>
+          </div>
+          <div slot="footer" style="display: flex;">
+            <Button primary>Применить</Button>
+            <Button @click="showModal = false">Закрыть</Button>
+          </div>
+        </Modal>
       </Content>
       <Footer>Footer</Footer>
     </Layout>
@@ -65,6 +85,7 @@ import Button from './components/Button/Button.vue';
 import Chip from './components/Chip/Chip.vue';
 import Icon from './components/Icon/Icon.vue';
 import Card from './components/Card/Card.vue';
+import Modal from './components/Modal/Modal.vue';
 
 export default {
   name: 'app',
@@ -79,6 +100,12 @@ export default {
     Chip,
     Icon,
     Card,
+    Modal,
+  },
+  data() {
+    return {
+      showModal: false,
+    };
   },
 };
 </script>

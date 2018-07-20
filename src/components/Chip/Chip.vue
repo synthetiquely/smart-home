@@ -1,5 +1,5 @@
 <template>
-  <div tabindex="0" class="chip">{{text}}</div>
+  <div tabindex="0" class="chip" @click="$emit('click')">{{text}}</div>
 </template>
 
 <script>
