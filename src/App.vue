@@ -5,7 +5,11 @@
         <Logo />
         <HeaderMenu />
       </Header>
-      <Content>Content</Content>
+      <Content>
+        <Button primary>Применить</Button>
+        <Button secondary>Применить</Button>
+        <Button>Закрыть</Button>
+      </Content>
       <Footer>Footer</Footer>
     </Layout>
   </div>
@@ -18,6 +22,7 @@ import HeaderMenu from './components/HeaderMenu/HeaderMenu.vue';
 import Logo from './components/Logo/Logo.vue';
 import Content from './components/Content/Content.vue';
 import Footer from './components/Footer/Footer.vue';
+import Button from './components/Button/Button.vue';
 
 export default {
   name: 'app',
@@ -28,6 +33,7 @@ export default {
     Footer,
     HeaderMenu,
     Logo,
+    Button,
   },
 };
 </script>
@@ -38,9 +44,12 @@ export default {
 :root {
   --gray: #858585;
   --light-gray: #f0f0f0;
-  --lighten-gray: ##f7f7f7;
+  --lighten-gray: #f7f7f7;
   --dark-gray: #333;
   --yellow: #ffd93e;
+  --dark-yellow: #ffcd00;
+  --white: #fff;
+  --black: #000;
   --desktop-container-paddings: 0 30px;
   --mobile-container-paddings: 0 15px;
 }
